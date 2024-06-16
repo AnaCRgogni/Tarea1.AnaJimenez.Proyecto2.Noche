@@ -1,15 +1,20 @@
+using BL.DAOs;
+using BL.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Acá es el punto de entrada de .NET entonces acá configuro el servicio de pictures.
+//Acá también va la definición del contenedor de inyección de dependencias.
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<PictureDao>();
+builder.Services.AddScoped<PictureService>();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -23,21 +28,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-//CODIGO EXTRA QUE RECOMIENDA PARA CONFIGURAR SERVICIOS Y MIDDLEWARE NECESARIOS
-
-/*var builder = WebApplication.CreateBuilder(args);
-
-// Agregar servicios
-builder.Services.AddHttpClient<ExternalApiService>();
-builder.Services.AddControllers();
-
-var app = builder.Build();
-
-app.UseRouting();
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
-
-app.Run();*/

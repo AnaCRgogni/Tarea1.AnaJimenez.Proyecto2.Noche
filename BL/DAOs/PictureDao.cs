@@ -1,8 +1,9 @@
 ﻿using System.Net.Http.Headers;
 using System.Net.Http;
 using Newtonsoft.Json;
+using BL.Models;
 
-namespace BL
+namespace BL.DAOs
 {
     public class PictureDao
     {

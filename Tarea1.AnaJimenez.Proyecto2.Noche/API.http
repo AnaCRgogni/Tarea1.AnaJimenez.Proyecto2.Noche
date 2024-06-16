@@ -1,0 +1,6 @@
+@API_HostAddress = https://localhost:7049
+@Tarea1.AnaJimenez.Proyecto2.Noche_HostAddress = http://localhost:5088
+
+GET {{API_HostAddress}}/api/pictures/search?query=string
+
+###

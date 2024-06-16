@@ -1,0 +1,5 @@
+﻿@MVC_HostAddress = https://localhost:7231
+
+GET {{MVC_HostAddress}}/home/index/{id}
+
+###

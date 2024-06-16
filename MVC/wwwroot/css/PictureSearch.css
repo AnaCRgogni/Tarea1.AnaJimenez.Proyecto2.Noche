@@ -1,0 +1,40 @@
+﻿.search-container{
+    text-align: center;
+    padding: 20px;
+}
+
+.search-box {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ff9800;
+}
+
+.search-results {
+    margin-top: 20px;
+}
+
+.picture-card {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #f1c40f;
+    transition: transform 0.2s ease-in-out;
+}
+
+    .picture-card:hover {
+        transform: scale(1.05);
+    }
+
+.picture-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+.photographer-name {
+    padding: 10px;
+    background-color: #e67e22;
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
